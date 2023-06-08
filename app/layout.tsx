@@ -15,7 +15,6 @@ const mulish = Mulish({ subsets: ["latin"] });
 export const metadata = {
   title: "TNG Home Builders",
   description: "",
-  robots: { index: false },
 };
 
 export default ({ children }: { children: ReactNode }) => {
