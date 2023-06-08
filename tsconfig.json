@@ -20,7 +20,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@components/*": ["./app/components/*"],
+      "@styles/*": ["./app/styles/components/*"],
+      "@breakpoints": ["./app/styles/breakpoints.scss"],
+      "@fonts": ["./app/styles/fonts.scss"],
+      "@colors": ["./app/styles/colors.scss"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

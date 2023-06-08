@@ -1,0 +1,22 @@
+@import "@breakpoints";
+
+.container {
+  max-width: 1390px;
+  width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+
+  @include breakpoint(small-desktop) {
+    max-width: 1024px;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 570px;
+    padding: 0 24px;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: calc(100% - 32px);
+    padding: 0 16px;
+  }
+}
