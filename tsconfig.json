@@ -24,7 +24,8 @@
       "@styles/*": ["./app/styles/components/*"],
       "@breakpoints": ["./app/styles/breakpoints.scss"],
       "@fonts": ["./app/styles/fonts.scss"],
-      "@colors": ["./app/styles/colors.scss"]
+      "@colors": ["./app/styles/colors.scss"],
+      "@content": ["./app/content"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
