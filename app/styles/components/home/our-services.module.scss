@@ -1,0 +1,29 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.subtitle{
+    @include fonts.header-4;
+    color: colors.$brown-600;
+}
+
+.title{
+    @include fonts.header-2;
+    color: colors.$brown-600;
+}
+
+.paragrpah{
+    @include fonts.paragraph;
+    color: colors.$gray-300;
+}
+
+.rectangle{
+    width: 639px;
+    height: 240px;
+    margin-right: 48px;
+    background: #e0e0e0;    
+  }
+
+.content{
+    justify-content: left;
+    margin-right: 21px;
+}
