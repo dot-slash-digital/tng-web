@@ -1,5 +1,3 @@
-import './fonts.scss';
-
 import SectionContainer from "@components/section-container";
 
 import styles from "@styles/home/our-services.module.scss";
