@@ -1,13 +1,14 @@
+
 import SectionContainer from "@components/section-container";
 
 import styles from "@styles/home/our-services.module.scss";
 
 export default () => {
-
+  //const { list, title } = content.home.ourServices;
   return (
     <div className={styles.component}>
         <SectionContainer>
-          <div className={styles.mainContainer}>
+          <div>
             <div className={styles.title}>Our Services</div>
             <div className={styles.subContainer}>
               <div className={styles.content}>
