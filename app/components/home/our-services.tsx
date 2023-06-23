@@ -1,5 +1,6 @@
 
 import SectionContainer from "@components/section-container";
+import content from "@content";
 
 import styles from "@styles/home/our-services.module.scss";
 
