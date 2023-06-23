@@ -29,7 +29,9 @@
   }
 
 .content{
-    flex-basis: 50%;
+
+    display: grid;
+    grid-auto-columns: repeat(2, 1fr)
 }
 
 
