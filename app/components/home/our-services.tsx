@@ -12,12 +12,12 @@ export default () => {
           <div>
             <div className={styles.title}>Our Services</div>
             <div className={styles.subContainer}>
-              <div className={styles.content}>
+              <div>
                 <div className={styles.rectangle}/>
                 <div className={styles.subtitle}>Home Remodeling</div>
                 <div className={styles.description}>Service description goes here Service description goes here Service description goes here Service description goes here Service description goes here Service description goes here</div>
               </div>
-              <div className={styles.content}>
+              <div>
                 <div className={styles.rectangle}/>
                 <div className={styles.subtitle}>New Home Construction</div>
                 <div className={styles.description}>Service description goes here Service description goes here Service description goes here Service description goes here</div>

@@ -28,17 +28,8 @@
     background: #e0e0e0;    
   }
 
-.content{
-
-    display: grid;
-    grid-auto-columns: repeat(2, 1fr)
-}
-
-
-
 .subContainer{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 48px;
 }
