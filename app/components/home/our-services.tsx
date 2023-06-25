@@ -10,18 +10,15 @@ export default () => {
     <div className={styles.component}>
         <SectionContainer>
           <div>
-            <div className={styles.title}>Our Services</div>
+            <div className={styles.title}>{title}</div>
             <div className={styles["sub-container"]}>
-              <div>
-                <div className={styles.rectangle}/>
-                <div className={styles.subtitle}>Home Remodeling</div>
-                <div className={styles.description}>Service description goes here Service description goes here Service description goes here Service description goes here Service description goes here Service description goes here</div>
-              </div>
-              <div>
-                <div className={styles.rectangle}/>
-                <div className={styles.subtitle}>New Home Construction</div>
-                <div className={styles.description}>Service description goes here Service description goes here Service description goes here Service description goes here</div>
-              </div>
+              {list.map((service, index) => (
+                <div key={index}>
+                  <div className={styles.rectangle}/>
+                  <div className={styles.subtitle}>{service.title}</div>
+                  <div className={styles.description}>{service.description}</div>
+                </div>
+              ))}
             </div>
           </div>
 
