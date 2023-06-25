@@ -1,14 +1,14 @@
+import SubpageJumbotron from "@components/subpage-jumbotron";
 import AlternatingContent from "@components/working-with-us/alternating-content";
-import Jumbotron from "@components/working-with-us/jumbotron";
 import content from "@content";
 
 export default () => {
-  const { alternatingContent } = content.workingWithUs;
+  const {alternatingContent, jumbotron} = content.workingWithUs;
 
   return (
     <>
       <div>Working with Us page</div>
-      <Jumbotron />
+      <SubpageJumbotron {...jumbotron} />
       <AlternatingContent />
       <AlternatingContent />
       <AlternatingContent />
