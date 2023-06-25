@@ -28,8 +28,14 @@
     background: #e0e0e0;    
   }
 
-.subContainer{
+.sub-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
+}
+
+
+.component{
+    margin-bottom: 120px;
+    margin-top: 120px;
 }

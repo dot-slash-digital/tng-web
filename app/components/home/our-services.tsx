@@ -11,7 +11,7 @@ export default () => {
         <SectionContainer>
           <div>
             <div className={styles.title}>Our Services</div>
-            <div className={styles.subContainer}>
+            <div className={styles["sub-container"]}>
               <div>
                 <div className={styles.rectangle}/>
                 <div className={styles.subtitle}>Home Remodeling</div>
