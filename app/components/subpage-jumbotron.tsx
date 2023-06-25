@@ -10,7 +10,7 @@ export default ({
   return (
     <div
       className={styles.component}
-      style={{backgroundImage: `url(${backgroundImage})`}}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className={styles.title}>{title}</div>
     </div>
