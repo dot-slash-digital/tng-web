@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className={styles.component}>
         <SectionContainer>
-          <div>
+          <div className={styles.component}>
             <div className={styles.title}>{title}</div>
             <div className={styles["sub-container"]}>
               {list.map((service, index) => (

@@ -1,0 +1,48 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.componenttemp{    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.container{
+    margin-bottom: 108px;
+    margin-top: 108px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;    
+}
+
+.text-box{
+
+    margin-bottom:56px;
+}
+
+.title{
+    @include fonts.header-2;
+    color: colors.$brown-600;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+
+.description{
+    @include fonts.paragraph;
+    color: colors.$gray-300;
+    margin-bottom: 8px;
+}
+
+.button{
+    width: 279px;
+    height: 60px;
+    background:colors.$yellow-200;;
+}

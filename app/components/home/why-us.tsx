@@ -8,7 +8,29 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>Why us</SectionContainer>
+      <SectionContainer>
+        <div className={styles.componenttemp}>
+          <div className={styles.image}/>
+          <div className={styles["container"]}>
+            <div className={styles["text-box"]}>
+              <div className={styles.title}>Why us</div>
+              <div className={styles.description}>
+                Step description goes here step description goes here step description 
+                goes here step description goes here step description goes here step description goes here. 
+                Step description goes here step description goes here step description goes here step description goes here
+                step description goes here step description goes here. step description goes here.
+              </div>
+              <div className={styles.description}>
+                Step description goes here step description goes here step description goes
+                here step description goes here step description goes here step description goes here.
+                Step description goes here step description goes here step description goes here.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </SectionContainer>
     </div>
   );
 };
