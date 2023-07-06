@@ -16,12 +16,8 @@ export default () => {
               <div className={styles.title}>{title}</div>
               <div className={styles.description}>{description}</div>
             </div>
-            <a href={button.destination}>
-              <div className={styles.button}>
-                <div className={styles["button-text"]}>
-                  {button.label}
-                </div>
-              </div>
+            <a className={styles.button} href={button.destination} >
+                {button.label}
             </a>
  
           </div>

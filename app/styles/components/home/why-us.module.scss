@@ -47,12 +47,10 @@
     height: 60px;
     background:colors.$yellow-200;
     border-radius: 10px;
-}
-
-.button-text{
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 32px;
     padding-right: 32px;
     @include fonts.paragraph-bold;
 }
+
