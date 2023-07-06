@@ -26,6 +26,11 @@ export default () => {
                 Step description goes here step description goes here step description goes here.
               </div>
             </div>
+            <div className={styles.button}>
+              <div className={styles["button-text"]}>
+                CTA button goes here
+              </div>
+            </div> 
           </div>
 
         </div>
