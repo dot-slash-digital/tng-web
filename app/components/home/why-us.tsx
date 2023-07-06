@@ -13,22 +13,12 @@ export default () => {
           <div className={styles.image}/>
           <div className={styles["container"]}>
             <div className={styles["text-box"]}>
-              <div className={styles.title}>Why us</div>
-              <div className={styles.description}>
-                Step description goes here step description goes here step description 
-                goes here step description goes here step description goes here step description goes here. 
-                Step description goes here step description goes here step description goes here step description goes here
-                step description goes here step description goes here. step description goes here.
-              </div>
-              <div className={styles.description}>
-                Step description goes here step description goes here step description goes
-                here step description goes here step description goes here step description goes here.
-                Step description goes here step description goes here step description goes here.
-              </div>
+              <div className={styles.title}>{title}</div>
+              <div className={styles.description}>{description}</div>
             </div>
             <div className={styles.button}>
               <div className={styles["button-text"]}>
-                CTA button goes here
+                <a href={button.destination}>{button.label}</a>
               </div>
             </div> 
           </div>
