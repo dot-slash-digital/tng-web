@@ -1,11 +1,14 @@
 import ContactForm from "@components/contact/contact-form";
-import Jumbotron from "@components/contact/jumbotron";
+import SubpageJumbotron from "@components/subpage-jumbotron";
+import content from "@content";
 
 export default () => {
+  const { jumbotron } = content.contact;
+
   return (
     <>
       <div>Contact page</div>
-      <Jumbotron />
+      <SubpageJumbotron {...jumbotron} />
       <ContactForm />
     </>
   );
