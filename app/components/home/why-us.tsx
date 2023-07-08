@@ -8,23 +8,18 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>
         <div className={styles.componenttemp}>
           <div className={styles.image}/>
-          <div className={styles["container"]}>
+          <div className={styles.container}>
             <div className={styles["text-box"]}>
               <div className={styles.title}>{title}</div>
               <div className={styles.description}>{description}</div>
-            </div>
+            </div>            
             <a className={styles.button} href={button.destination} >
-                {button.label}
+              {button.label}
             </a>
- 
           </div>
-
         </div>
-
-      </SectionContainer>
     </div>
   );
 };

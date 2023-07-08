@@ -8,11 +8,11 @@
 }
 
 .container{
-    margin-bottom: 108px;
-    margin-top: 108px;
-    margin-left: 120px;
-    margin-right: 120px;
     gap: 56px;
+    padding-bottom: 108px;
+    padding-top: 108px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .image{
@@ -22,7 +22,6 @@
 }
 
 .text-box{
-
     margin-bottom:56px;
 }
 
@@ -30,8 +29,8 @@
     @include fonts.header-2;
     color: colors.$brown-600;
     display: grid;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     margin-bottom: 32px;
 }
 
@@ -40,6 +39,7 @@
     @include fonts.paragraph;
     color: colors.$gray-300;
     gap: 8px;
+    text-align: left;
 }
 
 .button{
