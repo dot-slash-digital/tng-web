@@ -1,54 +1,57 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
 
-.component{    
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.container{
-    gap: 56px;
-    margin: 108px 120px 108px 120px;
+.container {
+  gap: 56px;
+  margin: 108px 120px 108px 120px;
 }
 
-.image{
-    width: 100%;
-    height: 100%;
-    background: #e0e0e0;    
+.image {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
 }
 
-.text-box{
-    margin-bottom:56px;
+.text-box {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 56px;
     gap: 8px;
 }
 
-.title{
-    @include fonts.header-2;
-    color: colors.$brown-600;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    margin-bottom: 32px;
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-bottom: 24px;
 }
 
-
-.description{
-    @include fonts.paragraph;
-    color: colors.$gray-300;
-    gap: 8px;
-    display: flex;
-    margin-bottom:8px;
+.description {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
+  gap: 8px;
+  display: flex;
+  margin-bottom: 8px;
 }
 
-.button{
+.button {
+  @include fonts.paragraph-bold;
+  background-color: colors.$yellow-200;
+  color: colors.$brown-600;
+  border-radius: 10px;
+  padding: 20px 32px 20px 32px;
+  display: inline-block;
+}
+
+.button-text{
     @include fonts.paragraph-bold;
-    background-color:colors.$yellow-200;
     color: colors.$brown-600;
-    border-radius: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 32px;
-    padding-right: 32px;
     text-decoration: none;
 }
-
