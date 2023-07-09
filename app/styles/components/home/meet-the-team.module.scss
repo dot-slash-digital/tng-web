@@ -1,0 +1,119 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+.component{
+    padding-left: 169px;
+    padding-right: 169px;
+    background: colors.$gray-100;
+}
+
+.container{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left:32px;
+    padding-right: 32px;
+    gap: 56;
+}
+
+.title{
+    @include fonts.header-2;
+    color: colors.$brown-600;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.text-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px;
+}
+
+.tm-box{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tm-image{
+    width: 240px;
+    height: 240px;
+    background: #e0e0e0; 
+    border-radius: 50%;
+    margin-bottom: 24px;
+
+}
+
+.team-member{
+    @include fonts.header-4;
+    color: colors.$brown-600;
+    text-align: center;
+}
+
+.tm-description{
+    @include fonts.paragraph;
+    color: colors.$gray-300;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    @use "@colors" as colors;
+    @use "@fonts" as fonts;
+    .component{
+        padding-left: 169px;
+        padding-right: 169px;
+        background: colors.$gray-100;
+    }
+    
+    .container{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-left:32px;
+        padding-right: 32px;
+        gap: 56;
+    }
+    
+    .title{
+        @include fonts.header-2;
+        color: colors.$brown-600;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    
+    .text-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 56px;
+    }
+    
+    .tm-box{
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tm-image{
+        width: 240px;
+        height: 240px;
+        background: #e0e0e0; 
+        border-radius: 50%;
+        margin-bottom: 24px;
+    
+    }
+    
+    .team-member{
+        @include fonts.header-4;
+        color: colors.$brown-600;
+        text-align: center;
+    }
+    
+    .tm-description{
+        @include fonts.paragraph;
+        color: colors.$gray-300;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
