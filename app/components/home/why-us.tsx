@@ -12,8 +12,13 @@ export default () => {
       <div className={styles.container}>
         <div className={styles["text-box"]}>
           <div className={styles.title}>{title}</div>
-          <div className={styles.description}>{description}</div>
-          <div className={styles.description}>{description}</div>
+          {description.map((text, index) => (
+            <div key={index}>
+              <div className={styles.description}>
+                {text}
+              </div>
+            </div>
+          ))}
         </div>            
         <a className={styles.button} href={button.destination} >
           {button.label}
