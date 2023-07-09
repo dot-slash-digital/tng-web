@@ -19,7 +19,9 @@ export default () => {
           ))}
         </div>
         <div className={styles.button}>
-          <a className={styles["button-text"]} href={button.destination}>{button.label}</a>
+          <a className={styles["button-text"]} href={button.destination}>
+            {button.label}
+          </a>
         </div>
       </div>
     </div>

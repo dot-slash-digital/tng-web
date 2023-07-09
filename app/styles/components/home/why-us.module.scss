@@ -18,18 +18,16 @@
 }
 
 .text-box {
-    display:flex;
-    flex-direction: column;
-    padding-bottom: 56px;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 56px;
+  gap: 8px;
 }
 
 .title {
   @include fonts.header-2;
   color: colors.$brown-600;
   display: flex;
-  align-items: left;
-  justify-content: left;
   margin-bottom: 24px;
 }
 
@@ -50,8 +48,8 @@
   display: inline-block;
 }
 
-.button-text{
-    @include fonts.paragraph-bold;
-    color: colors.$brown-600;
-    text-decoration: none;
+.button-text {
+  @include fonts.paragraph-bold;
+  color: colors.$brown-600;
+  text-decoration: none;
 }
