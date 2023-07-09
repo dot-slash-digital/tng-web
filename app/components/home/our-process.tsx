@@ -9,18 +9,6 @@ export default () => {
   return (
     <div className={styles.component}>
       <SectionContainer>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.container}>
-          <div className={styles["sub-container-left"]}>
-            <div className={styles.rectangle}>
-              <div className={styles["text-box"]}>
-                <div className={styles["sub-title"]}>
-                  Step #1 Title
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </SectionContainer>
     </div>
   );

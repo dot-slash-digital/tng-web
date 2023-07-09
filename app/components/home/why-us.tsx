@@ -8,20 +8,17 @@ export default () => {
 
   return (
     <div className={styles.component}>
-        <div className={styles.componenttemp}>
-          <div className={styles.image}/>
-          <div className={styles.container}>
-            <div className={styles["text-box"]}>
-              <div className={styles.title}>{title}</div>
-              <div className={styles.description}>
-                {description}
-              </div>
-            </div>            
-            <a className={styles.button} href={button.destination} >
-              {button.label}
-            </a>
-          </div>
-        </div>
+      <div className={styles.image}/>
+      <div className={styles.container}>
+        <div className={styles["text-box"]}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.description}>{description}</div>
+          <div className={styles.description}>{description}</div>
+        </div>            
+        <a className={styles.button} href={button.destination} >
+          {button.label}
+        </a>
+      </div>
     </div>
   );
 };
