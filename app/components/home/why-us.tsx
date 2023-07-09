@@ -8,7 +8,22 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>Why us</SectionContainer>
+      <div className={styles.image} />
+      <div className={styles.container}>
+        <div className={styles["text-box"]}>
+          <div className={styles.title}>{title}</div>
+          {description.map((text, index) => (
+            <div key={index}>
+              <div className={styles.description}>{text}</div>
+            </div>
+          ))}
+        </div>
+        <div className={styles.button}>
+          <a className={styles["button-text"]} href={button.destination}>
+            {button.label}
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
