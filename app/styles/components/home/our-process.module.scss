@@ -1,0 +1,123 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component{
+    background: colors.$brown-100;
+}
+.title{
+    @include fonts.header-2;
+    color: colors.$brown-600;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 56px;
+}
+
+.container{
+    gap: 48px;
+    padding-bottom: 120px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.circle{
+    width: 48px;
+    height: 48px;
+    background-color: colors.$brown-500; 
+    border-radius: 50%;
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sub-container-left{
+    display: flex;
+    flex-direction: column;
+    gap:48px;
+}
+
+.sub-container-right{
+    padding-top:120px;
+    display: flex;
+    flex-direction: column;
+    gap:48px;
+}
+
+.rectangle{
+    width: 548px;
+    background: colors.$white;
+    border: 4px dashed colors.$brown-400;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: left;
+    justify-content: left;
+    gap: 24px;
+    padding: 40px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.text-box{
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+
+.sub-title{
+    @include fonts.header-4;
+    color: colors.$brown-600;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+.square{
+    width: 64px;
+    height: 64px;
+    background: colors.$gray-100;
+}
+
+.description{
+    @include fonts.paragraph;
+    color: colors.$gray-300;
+}
+
+.button{
+    @include fonts.paragraph-bold;
+    color: colors.$brown-400;
+    margin-top: 12px;
+    border-radius: 10px;
+    padding: 16px 24px;
+    text-decoration: none;
+    border: 2px solid colors.$brown-400;
+    display: inline-block;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+}
+
+.button-text{
+    @include fonts.paragraph-bold;
+    color: colors.$brown-400;
+    text-decoration: none;
+
+}
+
+.circle-num{
+    @include fonts.paragraph-bold;
+    color: colors.$white;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    background: colors.$brown-400;
+}
