@@ -1,0 +1,55 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component{
+    background: gray;
+    padding: 200px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+
+}
+
+.container{
+    padding: 54px 80px;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 40px;
+    width: 890px;
+
+}
+
+.title{
+    @include fonts.header-1;
+    color: colors.$brown-600;
+    align-self: stretch;
+    margin-bottom:24px;
+}
+
+.button{
+    @include fonts.paragraph-bold;
+    background-color: colors.$yellow-200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 20px 32px;
+}
+
+.button-text{
+    @include fonts.paragraph-bold;
+    color: colors.$brown-600;
+    text-decoration: none;
+}
+
+.sub-title{
+    @include fonts.header-3;
+    color: colors.$gray-300;
+    align-self: stretch;
+    margin-bottom:40px;
+}
