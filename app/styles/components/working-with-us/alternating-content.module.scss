@@ -1,0 +1,62 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: colors.$white;
+  padding: 120px 0;
+}
+
+.content {
+  display: flex;
+  gap: 108px;
+}
+
+.image {
+  background-color: gray;
+  width: 550px;
+  flex-shrink: 0;
+}
+
+.text {
+  padding: 64px 0;
+}
+
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+  margin-bottom: 32px;
+}
+
+.paragraph {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.button-container {
+  display: flex;
+}
+
+.button {
+  @include fonts.paragraph-bold;
+  background-color: colors.$yellow-200;
+  color: colors.$brown-600;
+  display: flex;
+  padding: 20px 32px;
+  border-radius: 8px;
+  margin-top: 64px;
+  text-decoration: none;
+}
+
+.flip {
+  &.component {
+    background-color: colors.$brown-100;
+  }
+
+  .content {
+    flex-direction: row-reverse;
+  }
+}

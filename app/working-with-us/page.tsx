@@ -7,11 +7,10 @@ export default () => {
 
   return (
     <>
-      <div>Working with Us page</div>
       <SubpageJumbotron {...jumbotron} />
-      <AlternatingContent />
-      <AlternatingContent />
-      <AlternatingContent />
+      {alternatingContent.map((content, index) => (
+        <AlternatingContent {...content} flip={index % 2 !== 0} key={index} />
+      ))}
     </>
   );
 };
