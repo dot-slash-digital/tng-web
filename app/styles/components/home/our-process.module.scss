@@ -1,119 +1,113 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
 
-.component{
-    background-color: colors.$brown-100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.component {
+  background-color: colors.$brown-100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.title{
-    @include fonts.header-2;
-    color: colors.$brown-600;
-    padding-top: 120px;
-    padding-bottom: 56px;
-    text-align: center;
-}
-
-.container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 48px;
-    padding: 0px 32px 120px 32px;
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+  padding-top: 120px;
+  padding-bottom: 56px;
+  text-align: center;
 }
 
-.circle{
-    width: 48px;
-    height: 48px;
-    background-color: colors.$brown-500; 
-    border-radius: 50%;
-    position: absolute;
-    top: -24px;
-    left: -24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+  padding: 0px 32px 120px 32px;
 }
 
-.sub-container-left{
-    display: flex;
-    flex-direction: column;
-    gap:48px;
+.circle {
+  width: 48px;
+  height: 48px;
+  background-color: colors.$brown-500;
+  border-radius: 50%;
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sub-container-right{
-    padding-top:120px;
-    display: flex;
-    flex-direction: column;
-    gap:53px;
+.sub-container-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
-.rectangle{
-    width: 548px;
-    display: flex;
-    padding: 40px;
-    gap: 24px;
-    align-items: flex-start;
-    border-radius: 16px;
-    border: 3px dashed colors.$brown-400;
-    background-color: colors.$white;
-    position: relative;   
+.sub-container-right {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
 }
 
-
-.text-box{
-    display: flex;
-    flex-direction:column;
-    gap: 8px;
+.rectangle {
+  width: 548px;
+  display: flex;
+  padding: 40px;
+  gap: 24px;
+  align-items: flex-start;
+  border-radius: 16px;
+  border: 3px dashed colors.$brown-400;
+  background-color: colors.$white;
+  position: relative;
 }
 
-.sub-title{
-    @include fonts.header-4;
-    color: colors.$brown-600;
-    align-self: stretch;
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.square{
-    width: 64px;
-    height: 64px;
-    background: colors.$gray-100;
+.sub-title {
+  @include fonts.header-4;
+  color: colors.$brown-600;
+  align-self: stretch;
 }
 
-.description{
-    @include fonts.paragraph;
-    color: colors.$gray-300;
+.square {
+  width: 64px;
+  height: 64px;
+  background: colors.$gray-100;
+  flex-shrink: 0;
 }
 
-.button{
-    @include fonts.paragraph-bold;
-    color: colors.$brown-400;
-    margin-top: 12px;
-    border-radius: 10px;
-    padding: 16px 24px;
-    text-decoration: none;
-    border: 2px solid colors.$brown-400;
-    display: inline-block;
-    width: fit-content;
-    display: flex;
-    gap:8px;
+.description {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
 }
 
-.button-text{
-    @include fonts.paragraph-bold;
-    color: colors.$brown-400;
-    text-decoration: none;
-
+.button {
+  display: flex;
 }
 
-.circle-num{
-    @include fonts.paragraph-bold;
-    color: colors.$white;
+.button-text {
+  @include fonts.paragraph-bold;
+  color: colors.$brown-400;
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  margin-top: 12px;
+  padding: 16px 24px;
+  border: 2px solid colors.$brown-400;
+  border-radius: 10px;
 }
 
-.icon{
-    width: 24px;
-    height: 24px;
-    background: colors.$brown-400;
+.circle-num {
+  @include fonts.paragraph-bold;
+  color: colors.$white;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: colors.$brown-400;
 }
