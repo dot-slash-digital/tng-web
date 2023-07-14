@@ -28,7 +28,11 @@ const navbarLinks: NavbarLink[] = [
     prominent: true,
   },
 ];
-const socialMediaLinks: SocialMediaLink[] = [];
+const socialMediaLinks: SocialMediaLink[] = [
+  { destination: "", icon: "" },
+  { destination: "", icon: "" },
+  { destination: "", icon: "" },
+];
 const services: Service[] = [
   {
     title: "Home Remodeling",
@@ -189,6 +193,7 @@ export default {
         label: "Schedule a consultation",
         destination: routes[Page.CONTACT],
       },
+      insurance: "Fully insured info goes here",
     },
   },
   home: {
