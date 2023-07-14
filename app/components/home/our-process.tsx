@@ -17,7 +17,7 @@ export default () => {
           <div className={styles["sub-container-left"]}>
             {list.map((step, index) => (
               <div key={index}>
-                {(index === 0 || index ===2) && (
+                {(index%2===0) && (
                 <div className={styles.rectangle}>
                   <div className={styles.circle}>
                     <div className={styles["circle-num"]}>{index + 1}</div>  
@@ -49,7 +49,7 @@ export default () => {
           <div className={styles["sub-container-right"]}>
           {list.map((step, index) => (
               <div key={index}>
-                {(index === 1 || index ===3) && (
+                {(index%2!==0) && (
                 <div className={styles.rectangle}>
                   <div className={styles.circle}>
                     <div className={styles["circle-num"]}>{index + 1}</div> 
