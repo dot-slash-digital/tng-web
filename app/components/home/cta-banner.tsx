@@ -8,7 +8,6 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>
         <div className={styles.container}>
           <div className={styles.title}>{title}</div>
           <div className={styles.button}>
@@ -17,7 +16,6 @@ export default () => {
             </a>
           </div>
         </div>
-      </SectionContainer>
     </div>
   );
 };
