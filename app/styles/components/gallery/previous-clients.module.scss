@@ -1,0 +1,33 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: colors.$white;
+  padding: 120px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.image {
+  background-color: gray;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
