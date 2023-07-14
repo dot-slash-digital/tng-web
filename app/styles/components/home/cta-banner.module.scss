@@ -7,22 +7,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
 }
 
 .container{
     padding: 44px 80px;
-    background: white;
-    display: flex;
+    background-color: white;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 16px;
 
 }
 
 .title{
-    @include fonts.header-2;
+    @include fonts.header-3;
     color: colors.$brown-600;
     display: grid;
     align-items: center;
@@ -31,12 +31,11 @@
 }
 
 .button{
-    @include fonts.paragraph-bold;
     background-color: colors.$yellow-200;
     display: flex;
     width: fit-content;
-    border-radius: 10px;
-    padding: 16px 24px;
+    border-radius: 8px;
+    padding: 20px 32px;
 }
 
 .button-text{
