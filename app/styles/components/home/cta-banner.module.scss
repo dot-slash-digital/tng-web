@@ -1,45 +1,48 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
 
-.component{
-    background: gray;
-    padding: 80px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.component {
+  display: flex;
 }
 
-.container{
-    padding: 44px 80px;
-    background-color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 16px;
-
+.new-comp {
+  background-color: gray;
+  display: flex;
+  padding: 80px 0px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.title{
-    @include fonts.header-3;
-    color: colors.$brown-600;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin-bottom:32px;
+.container {
+  padding: 44px 80px;
+  background-color: colors.$semitransparent;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 16px;
+  gap: 32px;
 }
 
-.button{
-    background-color: colors.$yellow-200;
-    display: flex;
-    width: fit-content;
-    border-radius: 8px;
-    padding: 20px 32px;
+.title {
+  @include fonts.header-3;
+  color: colors.$brown-600;
 }
 
-.button-text{
-    @include fonts.paragraph-bold;
-    color: colors.$brown-600;
-    text-decoration: none;
+.button {
+  background-color: colors.$yellow-200;
+  display: flex;
+  width: fit-content;
+  border-radius: 8px;
+}
+
+.button-text {
+  @include fonts.paragraph-bold;
+  color: colors.$brown-600;
+  text-decoration: none;
+  display: flex;
+  width: fit-content;
+  padding: 20px 32px;
 }
