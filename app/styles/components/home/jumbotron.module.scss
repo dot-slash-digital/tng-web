@@ -1,55 +1,48 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
 
-.component{
-    background: gray;
-    padding: 200px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    
-
+.component {
+  background-color: gray;
+  padding: 200px 0px;
 }
 
-.container{
-    padding: 54px 80px;
-    background: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    border-radius: 40px;
-    width: 890px;
-
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 54px 80px;
+  background-color: colors.$white;
+  flex-direction: column;
+  border-radius: 40px;
+  width: 730px;
 }
 
-.title{
-    @include fonts.header-1;
-    color: colors.$brown-600;
-    align-self: stretch;
-    margin-bottom:24px;
+.title {
+  @include fonts.header-1;
+  color: colors.$brown-600;
+  align-self: stretch;
+  margin-bottom: 24px;
 }
 
-.button{
-    @include fonts.paragraph-bold;
-    background-color: colors.$yellow-200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    border-radius: 8px;
-    padding: 20px 32px;
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button-text{
-    @include fonts.paragraph-bold;
-    color: colors.$brown-600;
-    text-decoration: none;
+.button-text {
+  @include fonts.paragraph-bold;
+  color: colors.$brown-600;
+  text-decoration: none;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 20px 32px;
+  background-color: colors.$yellow-200;
 }
 
-.sub-title{
-    @include fonts.header-3;
-    color: colors.$gray-300;
-    align-self: stretch;
-    margin-bottom:40px;
+.sub-title {
+  @include fonts.header-3;
+  color: colors.$gray-300;
+  align-self: stretch;
+  margin-bottom: 40px;
 }
