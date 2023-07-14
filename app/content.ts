@@ -166,20 +166,6 @@ const blueprints: Blueprint[] = [
     description:
       "More info description goes here more info description goes here more info description goes here. More info description goes here more info description goes here more info description goes here.",
   },
-  {
-    image: "",
-    title: "Blueprint title goes here",
-    subtitle: "Subtitle goes here",
-    description:
-      "More info description goes here more info description goes here more info description goes here. More info description goes here more info description goes here more info description goes here.",
-  },
-  {
-    image: "",
-    title: "Blueprint title goes here",
-    subtitle: "Subtitle goes here",
-    description:
-      "More info description goes here more info description goes here more info description goes here. More info description goes here more info description goes here more info description goes here.",
-  },
 ];
 
 export default {
