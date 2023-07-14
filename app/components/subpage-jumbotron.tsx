@@ -1,3 +1,5 @@
+import SectionContainer from "@components/section-container";
+
 import styles from "@styles/subpage-jumbotron.module.scss";
 
 export default ({
@@ -12,7 +14,9 @@ export default ({
       className={styles.component}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={styles.title}>{title}</div>
+      <SectionContainer>
+        <div className={styles.title}>{title}</div>
+      </SectionContainer>
     </div>
   );
 };
