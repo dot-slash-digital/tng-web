@@ -8,7 +8,16 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>CTA Banner</SectionContainer>
+      <SectionContainer>
+        <div className={styles.container}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.button}>
+            <a className={styles["button-text"]} href={button.destination}>
+              {button.label}
+            </a>
+          </div>
+        </div>
+      </SectionContainer>
     </div>
   );
 };
