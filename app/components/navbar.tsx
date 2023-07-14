@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 import { routes, Page } from "@pageInfo";
@@ -16,9 +17,7 @@ const LinkItem = ({ destination, label, prominent }: NavbarLink) => {
 
   return prominent ? (
     <div className={styles["button-container"]}>
-      <Link className={styles.button} href={destination}>
-        {label}
-      </Link>
+      <Button {...{ destination, label }} type={ButtonType.PRIMARY_SMALL} />
     </div>
   ) : (
     <div className={styles["link-container"]}>

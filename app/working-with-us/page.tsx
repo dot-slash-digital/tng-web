@@ -1,3 +1,5 @@
+"use client";
+
 import SubpageJumbotron from "@components/subpage-jumbotron";
 import AlternatingContent from "@components/working-with-us/alternating-content";
 import content from "@content";
