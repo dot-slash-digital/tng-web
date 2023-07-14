@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import { WorkingWithUsSection } from "@types";
 
@@ -29,9 +28,7 @@ export default ({
             ))}
             {button && (
               <div className={styles["button-container"]}>
-                <Link className={styles.button} href={button.destination}>
-                  {button.label}
-                </Link>
+                <Button {...button} type={ButtonType.PRIMARY} />
               </div>
             )}
           </div>
