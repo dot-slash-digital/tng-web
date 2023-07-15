@@ -1,4 +1,4 @@
-import SectionContainer from "@components/section-container";
+import Button, { ButtonType } from "@components/button";
 import content from "@content";
 
 import styles from "@styles/home/why-us.module.scss";
@@ -8,20 +8,21 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <div className={styles.image} />
-      <div className={styles.container}>
-        <div className={styles["text-box"]}>
-          <div className={styles.title}>{title}</div>
-          {description.map((text, index) => (
-            <div key={index}>
-              <div className={styles.description}>{text}</div>
+      <div
+        className={styles.image}
+        style={{ backgroundColor: `url(${image})` }}
+      />
+      <div className={styles.content}>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.description}>
+          {description.map((paragraph, index) => (
+            <div className={styles.paragraph} key={index}>
+              {paragraph}
             </div>
           ))}
         </div>
         <div className={styles.button}>
-          <a className={styles["button-text"]} href={button.destination}>
-            {button.label}
-          </a>
+          <Button {...button} type={ButtonType.PRIMARY} />
         </div>
       </div>
     </div>
