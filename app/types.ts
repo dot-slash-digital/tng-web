@@ -16,11 +16,6 @@ export interface NavbarLink {
   prominent?: boolean;
 }
 
-export interface PreviousClient {
-  client: string;
-  images: string[];
-}
-
 export interface ProcessItem {
   icon: string;
   title: string;
