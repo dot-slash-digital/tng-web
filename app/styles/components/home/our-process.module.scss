@@ -1,0 +1,93 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: colors.$brown-100;
+  padding: 120px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &:last-child {
+    padding-top: 120px;
+  }
+}
+
+.card {
+  background-color: colors.$white;
+  border: 3px dashed colors.$brown-400;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  gap: 24px;
+  position: relative;
+  width: 468px;
+}
+
+.circle {
+  background-color: colors.$brown-500;
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  @include fonts.paragraph-bold;
+  color: colors.$brown-200;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background-color: gray;
+}
+
+.card-title {
+  @include fonts.header-4;
+  color: colors.$brown-600;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-paragraph {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
+}
+
+.card-button {
+  display: flex;
+  margin-top: 20px;
+}
