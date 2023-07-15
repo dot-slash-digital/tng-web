@@ -1,0 +1,27 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  padding: 120px 0;
+  background-color: colors.$white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+.description {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
+  width: 100%;
+  max-width: 960px;
+}
+
+.calendly-embed {
+  width: 854px;
+  height: 730px;
+  background-color: gray;
+}

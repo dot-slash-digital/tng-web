@@ -8,7 +8,12 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>Contact form</SectionContainer>
+      <SectionContainer>
+        <div className={styles.content}>
+          <div className={styles.description}>{description}</div>
+          <div className={styles["calendly-embed"]} />
+        </div>
+      </SectionContainer>
     </div>
   );
 };

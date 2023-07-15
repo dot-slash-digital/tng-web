@@ -1,0 +1,53 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background: colors.$gray-100;
+  padding: 120px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.title {
+  @include fonts.header-2;
+  color: colors.$brown-600;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-image {
+  height: 240px;
+  width: 240px;
+  background: gray;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.item-title {
+  @include fonts.header-4;
+  color: colors.$brown-600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.item-description {
+  @include fonts.paragraph;
+  color: colors.$gray-300;
+  text-align: center;
+}
