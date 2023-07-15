@@ -215,6 +215,7 @@ export default {
         label: "CTA button goes here",
         destination: routes[Page.CONTACT],
       },
+      image: "",
     },
     ourProcess: {
       title: "Our Process",

@@ -1,0 +1,28 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: gray;
+  padding: 80px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  background-color: colors.$semitransparent;
+  padding: 44px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-radius: 16px;
+}
+
+.title {
+  @include fonts.header-3;
+  color: colors.$brown-600;
+  text-align: center;
+}
