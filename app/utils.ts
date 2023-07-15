@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 import bp from "./styles/breakpoints-for-typescript.module.scss";

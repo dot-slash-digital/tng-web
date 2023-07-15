@@ -1,0 +1,31 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: gray;
+  padding: 200px 0px;
+}
+
+.container {
+  background-color: colors.$white;
+  padding: 54px 80px;
+  border-radius: 40px;
+  width: 100%;
+  max-width: 730px;
+}
+
+.title {
+  @include fonts.header-1;
+  color: colors.$brown-600;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  @include fonts.header-3;
+  color: colors.$gray-300;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: flex;
+}

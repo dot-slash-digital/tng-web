@@ -1,0 +1,13 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  padding: 180px 0;
+  background-color: gray;
+}
+
+.title {
+  @include fonts.header-1;
+  color: colors.$white;
+  text-align: center;
+}

@@ -2,7 +2,6 @@ import { routes, Page } from "./pageInfo";
 import {
   Blueprint,
   NavbarLink,
-  PreviousClient,
   ProcessItem,
   Service,
   SocialMediaLink,
@@ -29,7 +28,11 @@ const navbarLinks: NavbarLink[] = [
     prominent: true,
   },
 ];
-const socialMediaLinks: SocialMediaLink[] = [];
+const socialMediaLinks: SocialMediaLink[] = [
+  { destination: "", icon: "" },
+  { destination: "", icon: "" },
+  { destination: "", icon: "" },
+];
 const services: Service[] = [
   {
     title: "Home Remodeling",
@@ -125,32 +128,34 @@ const workingWithUsContent: WorkingWithUsSection[] = [
     ],
   },
 ];
-const previousClients: PreviousClient[] = [
-  { client: "Client #1", images: ["", "", "", "", "", ""] },
-  { client: "Client #2", images: ["", "", ""] },
-  { client: "Client #3", images: ["", ""] },
-  { client: "Client #4", images: ["", "", ""] },
-  { client: "Client #5", images: ["", "", "", "", "", "", "", "", ""] },
-  { client: "Client #6", images: [""] },
-  { client: "Client #7", images: ["", "", "", "", ""] },
-  { client: "Client #8", images: ["", "", ""] },
-  { client: "Client #9", images: ["", "", "", "", "", ""] },
+const previousClients: string[] = [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
 ];
 const blueprints: Blueprint[] = [
-  {
-    image: "",
-    title: "Blueprint title goes here",
-    subtitle: "Subtitle goes here",
-    description:
-      "More info description goes here more info description goes here more info description goes here. More info description goes here more info description goes here more info description goes here.",
-  },
-  {
-    image: "",
-    title: "Blueprint title goes here",
-    subtitle: "Subtitle goes here",
-    description:
-      "More info description goes here more info description goes here more info description goes here. More info description goes here more info description goes here more info description goes here.",
-  },
   {
     image: "",
     title: "Blueprint title goes here",
@@ -188,6 +193,7 @@ export default {
         label: "Schedule a consultation",
         destination: routes[Page.CONTACT],
       },
+      insurance: "Fully insured info goes here",
     },
   },
   home: {
@@ -245,7 +251,6 @@ export default {
     },
     previousClients: {
       title: "Previous Clients",
-      clients: previousClients.map(({ client }) => client),
       grid: previousClients,
     },
     blueprints: {
