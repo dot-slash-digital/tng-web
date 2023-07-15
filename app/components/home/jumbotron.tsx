@@ -1,3 +1,4 @@
+import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 
@@ -8,7 +9,15 @@ export default () => {
 
   return (
     <div className={styles.component}>
-      <SectionContainer>Jumbotron</SectionContainer>
+      <SectionContainer>
+        <div className={styles.container}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.subtitle}>{subtitle}</div>
+          <div className={styles.button}>
+            <Button {...button} type={ButtonType.PRIMARY} />
+          </div>
+        </div>
+      </SectionContainer>
     </div>
   );
 };
