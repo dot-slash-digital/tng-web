@@ -1,0 +1,57 @@
+@use "@colors" as colors;
+@use "@fonts" as fonts;
+
+.component {
+  background-color: colors.$brown-500;
+  padding: 40px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.right {
+  text-align: right;
+
+  .row-link-container {
+    justify-content: flex-end;
+  }
+}
+
+.row,
+.row-link {
+  @include fonts.paragraph;
+  color: colors.$white;
+}
+
+.row-link {
+  text-decoration: none;
+}
+
+.row-link-container {
+  display: flex;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.social-media-link {
+  background-color: colors.$brown-300;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

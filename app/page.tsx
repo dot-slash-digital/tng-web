@@ -1,3 +1,5 @@
+"use client";
+
 import CtaBanner from "@components/home/cta-banner";
 import Jumbotron from "@components/home/jumbotron";
 import MeetTheTeam from "@components/home/meet-the-team";
@@ -8,7 +10,6 @@ import WhyUs from "@components/home/why-us";
 export default () => {
   return (
     <>
-      <div>Home page</div>
       <Jumbotron />
       <OurServices />
       <CtaBanner />
