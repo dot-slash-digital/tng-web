@@ -1,22 +1,22 @@
+import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 
 import styles from "@styles/home/cta-banner.module.scss";
 
 export default () => {
-  const { button, title } = content.home.ctaBanner;
+  const { button, image, title } = content.home.ctaBanner;
 
   return (
-    <div className={styles.component}>
+    <div
+      className={styles.component}
+      style={{ backgroundColor: `url(${image})` }}
+    >
       <SectionContainer>
-        <div className={styles["new-comp"]}>
-          <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.banner}>
             <div className={styles.title}>{title}</div>
-            <div className={styles.button}>
-              <a className={styles["button-text"]} href={button.destination}>
-                {button.label}
-              </a>
-            </div>
+            <Button {...button} type={ButtonType.PRIMARY} />
           </div>
         </div>
       </SectionContainer>
