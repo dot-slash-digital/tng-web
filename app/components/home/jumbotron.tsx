@@ -1,3 +1,4 @@
+import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 
@@ -11,11 +12,9 @@ export default () => {
       <SectionContainer>
         <div className={styles.container}>
           <div className={styles.title}>{title}</div>
-          <div className={styles["sub-title"]}>{subtitle}</div>
+          <div className={styles.subtitle}>{subtitle}</div>
           <div className={styles.button}>
-            <a className={styles["button-text"]} href={button.destination}>
-              {button.label}
-            </a>
+            <Button {...button} type={ButtonType.PRIMARY} />
           </div>
         </div>
       </SectionContainer>
