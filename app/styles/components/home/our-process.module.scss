@@ -50,7 +50,7 @@
 }
 
 .rectangle {
-  width: 548px;
+  width: 462px;
   display: flex;
   padding: 40px;
   gap: 24px;
@@ -103,7 +103,7 @@
 
 .circle-num {
   @include fonts.paragraph-bold;
-  color: colors.$white;
+  color: colors.$brown-200;
 }
 
 .icon {
