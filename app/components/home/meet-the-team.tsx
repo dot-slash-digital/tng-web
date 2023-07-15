@@ -9,18 +9,17 @@ export default () => {
   return (
     <div className={styles.component}>
       <SectionContainer>
-        <div className={styles.container}>
+        <div className={styles.content}>
           <div className={styles.title}>{title}</div>
-          <div className={styles["text-box"]}>
-            {teamMembers.map((member, index) => (
-              <div key={index}>
-                <div className={styles["tm-box"]}>
-                  <div className={styles["tm-image"]}></div>
-                  <div className={styles["team-member"]}>{member.title}</div>
-                  <div className={styles["tm-description"]}>
-                    {member.description}
-                  </div>
-                </div>
+          <div className={styles.grid}>
+            {teamMembers.map(({ description, image, title }, index) => (
+              <div className={styles.item} key={index}>
+                <div
+                  className={styles["item-image"]}
+                  style={{ backgroundColor: `url(${image})` }}
+                />
+                <div className={styles["item-title"]}>{title}</div>
+                <div className={styles["item-description"]}>{description}</div>
               </div>
             ))}
           </div>
