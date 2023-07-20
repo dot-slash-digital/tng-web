@@ -1,5 +1,6 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
+@import "@breakpoints";
 
 .component {
   background-color: colors.$brown-500;
@@ -9,6 +10,13 @@
 .content {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+  }
 }
 
 .left,
@@ -16,6 +24,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @include breakpoint(mobile) {
+    align-items: center;
+  }
 }
 
 .right {
@@ -23,6 +35,10 @@
 
   .row-link-container {
     justify-content: flex-end;
+  }
+
+  @include breakpoint(mobile) {
+    text-align: center;
   }
 }
 
@@ -44,6 +60,10 @@
   display: flex;
   justify-content: flex-end;
   gap: 24px;
+
+  @include breakpoint(mobile) {
+    justify-content: center;
+  }
 }
 
 .social-media-link {
