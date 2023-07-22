@@ -63,6 +63,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  .link:hover + .underline {
+    width: 100%;
+  }
 }
 
 .link {
@@ -74,11 +78,16 @@
 }
 
 .underline {
-  width: 100%;
+  width: 0;
   height: 2px;
+  background-color: colors.$yellow-200;
 
   &.active {
-    background-color: colors.$yellow-200;
+    width: 100%;
+  }
+
+  &:not(.active) {
+    transition: 0.4s width;
   }
 }
 

@@ -54,6 +54,24 @@
 
 .row-link-container {
   display: flex;
+
+  a {
+    position: relative;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    margin-top: 26px;
+    background-color: colors.$white;
+    transition: 0.4s width;
+  }
+
+  a:hover::before {
+    width: 100%;
+  }
 }
 
 .social-media-links {
@@ -74,4 +92,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s background-color;
+
+  &:hover {
+    background-color: colors.$brown-300-hover;
+  }
+
+  &:active {
+    background-color: colors.$brown-300-active;
+  }
 }
