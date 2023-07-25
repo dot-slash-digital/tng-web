@@ -6,9 +6,6 @@
   background-color: colors.$white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  @include breakpoint (tablet){
-    grid-template-columns: 1fr;
-  }
 }
 
 .content {
