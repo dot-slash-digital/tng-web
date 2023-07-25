@@ -5,6 +5,12 @@
 .component {
   background-color: gray;
   padding: 200px 0px;
+  @include breakpoint (tablet){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .container {
@@ -14,12 +20,17 @@
   width: 100%;
   max-width: 730px;
   @include breakpoint(tablet) {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 48px 36px;
+    flex-direction: column;
+    padding: 48px 36px;
+    max-width: 450px;
   }
   @include breakpoint(mobile) {
     gap: 36px 32px;
+    max-width: 304px;
+
   }
 }
 
