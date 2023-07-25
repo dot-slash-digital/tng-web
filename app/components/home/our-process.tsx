@@ -2,6 +2,7 @@ import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 import { ProcessItem } from "@types";
+import { Breakpoint, useWindowSize } from "../utils";
 
 import styles from "@styles/home/our-process.module.scss";
 
@@ -12,6 +13,8 @@ const Card = ({
   index,
   title,
 }: ProcessItem & { index: number }) => {
+
+
   return (
     <div className={styles.card}>
       <div className={styles.circle}>
@@ -51,8 +54,9 @@ export default () => {
       .map((card, index) => ({ ...card, index }))
       .filter(({ index }) => index % 2 !== 0),
   ];
-
+  const { breakpoint } = useWindowSize();
   return (
+
     <div className={styles.component}>
       <SectionContainer>
         <div className={styles.content}>
