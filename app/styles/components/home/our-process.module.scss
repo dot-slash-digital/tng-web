@@ -64,6 +64,9 @@
   gap: 24px;
   position: relative;
   width: 468px;
+  @include breakpoint (mobile){
+    flex-direction:column ;
+  }
 }
 
 .circle {

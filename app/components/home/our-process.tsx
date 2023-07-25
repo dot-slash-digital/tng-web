@@ -47,7 +47,7 @@ export default () => {
   const { list, title } = content.home.ourProcess;
   const { breakpoint } = useWindowSize();
 
-  // size={breakpoint === Breakpoint.MOBILE ? 20 : 24}
+
 
   const cards = [
     list
