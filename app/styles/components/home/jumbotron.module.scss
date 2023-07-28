@@ -1,31 +1,53 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
+@import "@breakpoints";
 
 .component {
   background-color: gray;
-  padding: 200px 0px;
+  padding: 200px 0;
 }
 
 .container {
+  box-sizing: border-box;
   background-color: colors.$white;
   padding: 54px 80px;
   border-radius: 40px;
   width: 100%;
-  max-width: 730px;
+  max-width: 890px;
+
+  @include breakpoint(tablet) {
+    padding: 48px 36px;
+
+    * {
+      text-align: center;
+    }
+  }
 }
 
 .title {
   @include fonts.header-1;
   color: colors.$brown-600;
   margin-bottom: 24px;
+
+  @include breakpoint(tablet) {
+    margin-bottom: 16px;
+  }
 }
 
 .subtitle {
   @include fonts.header-3;
   color: colors.$gray-300;
   margin-bottom: 40px;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 24px;
+  }
 }
 
 .button {
   display: flex;
+
+  @include breakpoint(tablet) {
+    justify-content: center;
+  }
 }
