@@ -1,3 +1,5 @@
+"use client";
+
 import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
@@ -13,8 +15,6 @@ const Card = ({
   index,
   title,
 }: ProcessItem & { index: number }) => {
-
-
   return (
     <div className={styles.card}>
       <div className={styles.circle}>
@@ -45,50 +45,37 @@ const Card = ({
 
 export default () => {
   const { list, title } = content.home.ourProcess;
+
   const { breakpoint } = useWindowSize();
 
-
-
-  const cards = [
-    list
-      .map((card, index) => ({ ...card, index }))
-      .filter(({ index }) => index % 2 === 0),
-    list
-      .map((card, index) => ({ ...card, index }))
-      .filter(({ index }) => index % 2 !== 0),
-  ];
-
-const cards_resp = [list.map((card, index) => ({ ...card, index}))];
+  const cards =
+    breakpoint === Breakpoint.DESKTOP || breakpoint === Breakpoint.SMALL_DESKTOP
+      ? [
+          list
+            .map((card, index) => ({ ...card, index }))
+            .filter(({ index }) => index % 2 === 0),
+          list
+            .map((card, index) => ({ ...card, index }))
+            .filter(({ index }) => index % 2 !== 0),
+        ]
+      : [list.map((card, index) => ({ ...card, index }))];
 
   return (
-
-      <div className={styles.component}>
-        <SectionContainer>
-          <div className={styles.content}>
-            <div className={styles.title}>{title}</div>
-            {breakpoint === Breakpoint.DESKTOP || breakpoint === Breakpoint.SMALL_DESKTOP?
-            <div className={styles.columns}>
-              {cards.map((column, columnIndex) => (
-                <div className={styles.column} key={columnIndex}>
-                  {column.map((card) => (
-                    <Card {...card} key={card.index} />
-                  ))}
-                </div>
-              ))}
-            </div>
-            : 
-            <div className={styles.columns}>
-            {cards_resp.map((column, columnIndex) => (
+    <div className={styles.component}>
+      <SectionContainer>
+        <div className={styles.content}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.columns}>
+            {cards.map((column, columnIndex) => (
               <div className={styles.column} key={columnIndex}>
                 {column.map((card) => (
                   <Card {...card} key={card.index} />
                 ))}
               </div>
             ))}
-          </div>}
-          
           </div>
-        </SectionContainer>
-      </div>
+        </div>
+      </SectionContainer>
+    </div>
   );
 };
