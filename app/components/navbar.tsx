@@ -1,27 +1,38 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import Button, { ButtonType } from "@components/button";
+import Icon, { IconType } from "@components/icon";
 import SectionContainer from "@components/section-container";
 import content from "@content";
-import { routes, Page } from "@pageInfo";
 import { NavbarLink } from "@types";
+import { Breakpoint, useWindowSize } from "../utils";
 
 import styles from "@styles/navbar.module.scss";
 
-const LinkItem = ({ destination, label, prominent }: NavbarLink) => {
+const LinkItem = ({
+  closeMobileMenu = () => {},
+  destination,
+  label,
+  prominent,
+}: NavbarLink & { closeMobileMenu?: () => void }) => {
   const pathname = usePathname();
   const active = pathname === destination;
 
   return prominent ? (
-    <div className={styles["button-container"]}>
+    <div className={styles["button-container"]} onClick={closeMobileMenu}>
       <Button {...{ destination, label }} type={ButtonType.PRIMARY_SMALL} />
     </div>
   ) : (
     <div className={styles["link-container"]}>
-      <Link className={styles.link} href={destination}>
+      <Link
+        className={styles.link}
+        href={destination}
+        onClick={closeMobileMenu}
+      >
         {label}
       </Link>
       <div className={`${styles.underline} ${active ? styles.active : ""}`} />
@@ -32,6 +43,24 @@ const LinkItem = ({ destination, label, prominent }: NavbarLink) => {
 export default () => {
   const { links, logo } = content.global.navbar;
 
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const { breakpoint } = useWindowSize();
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "initial";
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (
+      isMobileMenuOpen &&
+      breakpoint &&
+      [Breakpoint.DESKTOP, Breakpoint.SMALL_DESKTOP].includes(breakpoint)
+    ) {
+      setMobileMenuOpen(false);
+    }
+  }, [breakpoint, isMobileMenuOpen]);
+
   return (
     <div className={styles.component}>
       <SectionContainer>
@@ -41,16 +70,51 @@ export default () => {
               <LinkItem {...link} key={index} />
             ))}
           </div>
-          <Link href={routes[Page.HOME]}>
-            <div className={styles.logo} />
+          <Link
+            href={logo.destination}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <div
+              className={styles.logo}
+              style={{ backgroundImage: `url(${logo.image})` }}
+            />
           </Link>
           <div className={styles.links}>
             {links.right.map((link, index) => (
               <LinkItem {...link} key={index} />
             ))}
           </div>
+          <div
+            className={`${styles["menu-button"]} ${
+              isMobileMenuOpen ? styles["open"] : ""
+            }`}
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            <Icon size={32} type={IconType.MENU} />
+          </div>
         </div>
       </SectionContainer>
+      <div
+        className={styles["mobile-menu-container"]}
+        style={{
+          height:
+            mobileMenuRef.current && isMobileMenuOpen
+              ? mobileMenuRef.current.scrollHeight
+              : 0,
+        }}
+      >
+        <SectionContainer>
+          <div ref={mobileMenuRef} className={styles["mobile-menu"]}>
+            {[...links.left, ...links.right].map((link, index) => (
+              <LinkItem
+                {...link}
+                closeMobileMenu={() => setMobileMenuOpen(false)}
+                key={index}
+              />
+            ))}
+          </div>
+        </SectionContainer>
+      </div>
     </div>
   );
 };
