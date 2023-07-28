@@ -1,5 +1,6 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
+@import "@breakpoints";
 
 .component {
   background-color: colors.$brown-500;
@@ -9,6 +10,13 @@
 .content {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+  }
 }
 
 .left,
@@ -16,6 +24,10 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @include breakpoint(mobile) {
+    align-items: center;
+  }
 }
 
 .right {
@@ -23,6 +35,10 @@
 
   .row-link-container {
     justify-content: flex-end;
+  }
+
+  @include breakpoint(mobile) {
+    text-align: center;
   }
 }
 
@@ -38,12 +54,34 @@
 
 .row-link-container {
   display: flex;
+
+  a {
+    position: relative;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    margin-top: 26px;
+    background-color: colors.$white;
+    transition: 0.4s width;
+  }
+
+  a:hover::before {
+    width: 100%;
+  }
 }
 
 .social-media-links {
   display: flex;
   justify-content: flex-end;
   gap: 24px;
+
+  @include breakpoint(mobile) {
+    justify-content: center;
+  }
 }
 
 .social-media-link {
@@ -54,4 +92,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s background-color;
+
+  &:hover {
+    background-color: colors.$brown-300-hover;
+  }
+
+  &:active {
+    background-color: colors.$brown-300-active;
+  }
 }

@@ -1,9 +1,14 @@
 @use "@colors" as colors;
 @use "@fonts" as fonts;
+@import "@breakpoints";
 
 .component {
   padding: 120px 0;
   background-color: colors.$white;
+
+  @include breakpoint(mobile) {
+    padding: 80px 0;
+  }
 }
 
 .content {
@@ -11,6 +16,10 @@
   flex-direction: column;
   align-items: center;
   gap: 72px;
+
+  @include breakpoint(tablet) {
+    gap: 48px;
+  }
 }
 
 .description {
@@ -18,10 +27,25 @@
   color: colors.$gray-300;
   width: 100%;
   max-width: 960px;
+
+  @include breakpoint(small-desktop) {
+    max-width: 830px;
+  }
 }
 
 .calendly-embed {
   width: 854px;
   height: 730px;
   background-color: gray;
+
+  @include breakpoint(tablet) {
+    width: 570px;
+    height: 487px;
+  }
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 0.85;
+  }
 }
