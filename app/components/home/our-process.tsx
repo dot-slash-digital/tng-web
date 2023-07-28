@@ -1,7 +1,10 @@
+"use client";
+
 import Button, { ButtonType } from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 import { ProcessItem } from "@types";
+import { Breakpoint, useWindowSize } from "../../utils";
 
 import styles from "@styles/home/our-process.module.scss";
 
@@ -43,14 +46,19 @@ const Card = ({
 export default () => {
   const { list, title } = content.home.ourProcess;
 
-  const cards = [
-    list
-      .map((card, index) => ({ ...card, index }))
-      .filter(({ index }) => index % 2 === 0),
-    list
-      .map((card, index) => ({ ...card, index }))
-      .filter(({ index }) => index % 2 !== 0),
-  ];
+  const { breakpoint } = useWindowSize();
+
+  const cards =
+    breakpoint === Breakpoint.DESKTOP || breakpoint === Breakpoint.SMALL_DESKTOP
+      ? [
+          list
+            .map((card, index) => ({ ...card, index }))
+            .filter(({ index }) => index % 2 === 0),
+          list
+            .map((card, index) => ({ ...card, index }))
+            .filter(({ index }) => index % 2 !== 0),
+        ]
+      : [list.map((card, index) => ({ ...card, index }))];
 
   return (
     <div className={styles.component}>
