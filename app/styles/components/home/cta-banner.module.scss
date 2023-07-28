@@ -4,7 +4,7 @@
 
 .component {
   background-color: gray;
-  padding: 80px;
+  padding: 80px 0;
 }
 
 .content {
@@ -20,12 +20,18 @@
   align-items: center;
   gap: 32px;
   border-radius: 16px;
-  @include breakpoint (tablet){
-    gap:24px;
+
+  @include breakpoint(tablet) {
+    gap: 24px;
   }
-  @include breakpoint (mobile){
+
+  @include breakpoint(mobile) {
     padding: 36px 24px;
     gap: 20px;
+
+    * {
+      text-align: center;
+    }
   }
 }
 
