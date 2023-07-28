@@ -6,10 +6,13 @@ import { ButtonType } from "@types";
 import styles from "@styles/home/jumbotron.module.scss";
 
 export default () => {
-  const { button, subtitle, title } = content.home.jumbotron;
+  const { backgroundImage, button, subtitle, title } = content.home.jumbotron;
 
   return (
-    <div className={styles.component}>
+    <div
+      className={styles.component}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <SectionContainer>
         <div className={styles.container}>
           <div className={styles.title}>{title}</div>

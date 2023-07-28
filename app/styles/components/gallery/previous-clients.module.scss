@@ -51,7 +51,9 @@
 }
 
 .image {
-  background-color: gray;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 8px;

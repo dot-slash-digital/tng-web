@@ -11,7 +11,9 @@ export default () => {
   return (
     <div
       className={styles.component}
-      style={{ backgroundColor: `url(${image})` }}
+      style={{
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(${image})`,
+      }}
     >
       <SectionContainer>
         <div className={styles.content}>

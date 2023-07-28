@@ -119,9 +119,8 @@
 
 .icon {
   flex-shrink: 0;
-  width: 64px;
-  height: 64px;
-  background-color: gray;
+  display: flex;
+  color: colors.$brown-500;
 }
 
 .card-title {

@@ -3,7 +3,9 @@
 @import "@breakpoints";
 
 .component {
-  background-color: gray;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding: 200px 0;
 }
 

@@ -25,7 +25,7 @@ export interface NavbarLink {
 }
 
 export interface ProcessItem {
-  icon: string;
+  icon: IconType;
   title: string;
   description: (string | JSX.Element)[];
   button?: Button;

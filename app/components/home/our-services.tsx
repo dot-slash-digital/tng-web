@@ -14,7 +14,10 @@ export default () => {
           <div className={styles.grid}>
             {list.map((service, index) => (
               <div className={styles.service} key={index}>
-                <div className={styles.image} />
+                <div
+                  className={styles.image}
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
                 <div className={styles.text}>
                   <div className={styles["service-title"]}>{service.title}</div>
                   <div className={styles.description}>

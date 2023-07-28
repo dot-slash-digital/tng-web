@@ -7,6 +7,7 @@ import { ButtonType, ProcessItem } from "@types";
 import { Breakpoint, useWindowSize } from "../../utils";
 
 import styles from "@styles/home/our-process.module.scss";
+import Icon from "@components/icon";
 
 const Card = ({
   button,
@@ -15,15 +16,16 @@ const Card = ({
   index,
   title,
 }: ProcessItem & { index: number }) => {
+  const { breakpoint } = useWindowSize();
+
   return (
     <div className={styles.card}>
       <div className={styles.circle}>
         <div className={styles.number}>{index + 1}</div>
       </div>
-      <div
-        className={styles.icon}
-        style={{ backgroundColor: `url(${icon})` }}
-      />
+      <div className={styles.icon}>
+        <Icon size={breakpoint === Breakpoint.MOBILE ? 40 : 64} type={icon} />
+      </div>
       <div>
         <div className={styles["card-title"]}>{title}</div>
         <div className={styles["card-description"]}>

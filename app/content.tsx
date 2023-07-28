@@ -11,6 +11,22 @@ import {
 } from "./types";
 import { IconType } from "@components/icon";
 
+// images
+const Gallery1 = "/images/gallery/1.jpg";
+const Gallery2 = "/images/gallery/2.jpg";
+const Gallery3 = "/images/gallery/3.jpg";
+const Gallery4 = "/images/gallery/4.jpg";
+const Gallery5 = "/images/gallery/5.jpg";
+const Gallery6 = "/images/gallery/6.jpg";
+const Gallery7 = "/images/gallery/7.jpg";
+const HomeCtaBanner = "/images/home-cta-banner.jpg";
+const HomeJumbotron = "/images/home-jumbotron.jpg";
+const HomeRemodeling = "/images/home-remodeling.jpg";
+const Logo = "/images/logo.jpg";
+const NewHomeConstruction = "/images/new-home-construction.jpg";
+const SampleBlueprint1 = "/images/sample-blueprint-1.jpg";
+const SampleBlueprint2 = "/images/sample-blueprint-2.jpg";
+
 const navbarLinks: NavbarLink[] = [
   {
     label: "Home",
@@ -41,18 +57,18 @@ const services: Service[] = [
     title: "Home Remodeling",
     description:
       "Whether you’re looking to update your kitchen, bathroom, or living room, we can help you create a space that you’ll love for years to come. Home remodeling is a great way to update your space, add functionality, and improve your home’s curb appeal.",
-    image: "",
+    image: HomeRemodeling,
   },
   {
     title: "New Home Construction",
     description:
       "New home construction gives you the freedom to choose the size and layout that are perfect for your family, with custom finishes to truly personalize it.",
-    image: "",
+    image: NewHomeConstruction,
   },
 ];
 const processItems: ProcessItem[] = [
   {
-    icon: "",
+    icon: IconType.EDIT_CALENDAR,
     title: "Schedule a meeting",
     description: [
       <span key={0}>
@@ -64,7 +80,7 @@ const processItems: ProcessItem[] = [
     ],
   },
   {
-    icon: "",
+    icon: IconType.PERM_PHONE_MSG,
     title: "Initial consultation",
     description: [
       "Bring any existing information you have, like blueprint designs or a lot already selected. This will help us get a better understanding of your needs and goals.",
@@ -72,7 +88,7 @@ const processItems: ProcessItem[] = [
     ],
   },
   {
-    icon: "",
+    icon: IconType.DEMOGRAPHY,
     title: "Curating an estimate",
     description: [
       "Based on the vision and project details, we will provide you with an estimate via email with a few options to select from.",
@@ -80,7 +96,7 @@ const processItems: ProcessItem[] = [
     ],
   },
   {
-    icon: "",
+    icon: IconType.HISTORY_EDU,
     title: "Project kickoff",
     description: [
       "Once the contract has been signed, the project officially starts. We will keep you updated on the progress of your home throughout the construction process, and you will be able to check in on your home as we go.",
@@ -137,42 +153,24 @@ const workingWithUsContent: WorkingWithUsSection[] = [
   },
 ];
 const previousClients: string[] = [
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
+  Gallery1,
+  Gallery2,
+  Gallery3,
+  Gallery4,
+  Gallery5,
+  Gallery6,
+  Gallery7,
 ];
 const blueprints: Blueprint[] = [
   {
-    image: "",
+    image: SampleBlueprint1,
     title: "Sample Blueprint 1",
     subtitle: "Traditional Home Design",
     description:
       "Blueprints for a traditional home typically include standard finishes, standard faucets, gas or electric stove, and a kitchen island, all of which are classic and timeless features.",
   },
   {
-    image: "",
+    image: SampleBlueprint2,
     title: "Sample Blueprint 2",
     subtitle: "Custom Home Design",
     description:
@@ -207,7 +205,7 @@ export default {
   global: {
     navbar: {
       logo: {
-        image: "",
+        image: Logo,
         destination: routes[Page.HOME],
       },
       links: {
@@ -229,6 +227,7 @@ export default {
   },
   home: {
     jumbotron: {
+      backgroundImage: HomeJumbotron,
       title: "Personalize your dream home",
       subtitle:
         "Build a home that is uniquely yours, reflecting your style and personality.",
@@ -247,7 +246,7 @@ export default {
         label: "Contact us",
         destination: routes[Page.CONTACT],
       },
-      image: "",
+      image: HomeCtaBanner,
     },
     ourProcess: {
       title: "Our Process",

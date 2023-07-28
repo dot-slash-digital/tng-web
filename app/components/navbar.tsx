@@ -74,9 +74,10 @@ export default () => {
             href={logo.destination}
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div
+            <img
+              alt="TNG Home Builders Logo"
               className={styles.logo}
-              style={{ backgroundImage: `url(${logo.image})` }}
+              src={logo.image}
             />
           </Link>
           <div className={styles.links}>
