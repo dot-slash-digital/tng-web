@@ -1,3 +1,5 @@
+import { IconType } from "@components/icon";
+
 export interface Blueprint {
   image: string;
   title: string;
@@ -25,7 +27,7 @@ export interface NavbarLink {
 export interface ProcessItem {
   icon: string;
   title: string;
-  description: string[];
+  description: (string | JSX.Element)[];
   button?: Button;
 }
 
@@ -36,7 +38,7 @@ export interface Service {
 }
 
 export interface SocialMediaLink {
-  icon: string;
+  icon: IconType;
   destination: string;
 }
 

@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
+import { companyName } from "@content";
 
 import "./styles/global.scss";
 
@@ -13,8 +14,17 @@ const merriweather = Merriweather({
 const mulish = Mulish({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "TNG Home Builders",
-  description: "",
+  icons: { apple: "/apple-touch-icon.png" },
+  manifest: "/manifest.json",
+  themeColor: "",
+  title: {
+    template: `%s | ${companyName}`,
+    default: companyName,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default ({ children }: { children: ReactNode }) => {
