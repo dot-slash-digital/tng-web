@@ -18,8 +18,12 @@ export default () => {
                   className={styles["item-image"]}
                   style={{ backgroundColor: `url(${image})` }}
                 />
-                <div className={styles["item-title"]}>{title}</div>
-                <div className={styles["item-description"]}>{description}</div>
+                <div className={styles["item-text"]}>
+                  <div className={styles["item-title"]}>{title}</div>
+                  <div className={styles["item-description"]}>
+                    {description}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
