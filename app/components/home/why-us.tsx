@@ -2,9 +2,10 @@
 
 import { Fragment } from "react";
 
-import Button, { ButtonType } from "@components/button";
+import Button from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
+import { ButtonType } from "@types";
 import { Breakpoint, useWindowSize } from "../../utils";
 
 import styles from "@styles/home/why-us.module.scss";

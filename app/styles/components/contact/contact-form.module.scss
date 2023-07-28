@@ -28,6 +28,10 @@
   width: 100%;
   max-width: 960px;
 
+  a {
+    color: inherit;
+  }
+
   @include breakpoint(small-desktop) {
     max-width: 830px;
   }

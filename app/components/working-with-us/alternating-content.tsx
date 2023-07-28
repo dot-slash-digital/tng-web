@@ -1,6 +1,6 @@
-import Button, { ButtonType } from "@components/button";
+import Button from "@components/button";
 import SectionContainer from "@components/section-container";
-import { WorkingWithUsSection } from "@types";
+import { ButtonType, WorkingWithUsSection } from "@types";
 
 import styles from "@styles/working-with-us/alternating-content.module.scss";
 

@@ -1,9 +1,9 @@
 "use client";
 
-import Button, { ButtonType } from "@components/button";
+import Button from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
-import { ProcessItem } from "@types";
+import { ButtonType, ProcessItem } from "@types";
 import { Breakpoint, useWindowSize } from "../../utils";
 
 import styles from "@styles/home/our-process.module.scss";

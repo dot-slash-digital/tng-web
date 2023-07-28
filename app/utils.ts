@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 import bp from "./styles/breakpoints-for-typescript.module.scss";
@@ -11,22 +9,27 @@ export enum Breakpoint {
   DESKTOP = "DESKTOP",
 }
 
+interface WindowSize {
+  width: number;
+  height: number;
+}
+
+const getWindowSize = () => {
+  if (typeof window === "undefined") {
+    return { width: 1920, height: 1080 };
+  }
+
+  return {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+};
+
 export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState<
-    | {
-        width: number;
-        height: number;
-      }
-    | undefined
-  >();
+  const [windowSize, setWindowSize] = useState<WindowSize>(getWindowSize());
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    const handleResize = () => setWindowSize(getWindowSize());
 
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -35,9 +38,7 @@ export const useWindowSize = () => {
   }, []);
 
   let breakpoint;
-  if (!windowSize) {
-    breakpoint = null;
-  } else if (windowSize.width <= parseInt(bp.mobile)) {
+  if (windowSize.width <= parseInt(bp.mobile)) {
     breakpoint = Breakpoint.MOBILE;
   } else if (windowSize.width <= parseInt(bp.tablet)) {
     breakpoint = Breakpoint.TABLET;

@@ -1,6 +1,7 @@
-import Button, { ButtonType } from "@components/button";
+import Button from "@components/button";
 import SectionContainer from "@components/section-container";
 import content from "@content";
+import { ButtonType } from "@types";
 
 import styles from "@styles/home/jumbotron.module.scss";
 

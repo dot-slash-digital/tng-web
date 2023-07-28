@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import Button, { ButtonType } from "@components/button";
+import Button from "@components/button";
 import Icon, { IconType } from "@components/icon";
 import SectionContainer from "@components/section-container";
 import content from "@content";
-import { NavbarLink } from "@types";
+import { ButtonType, NavbarLink } from "@types";
 import { Breakpoint, useWindowSize } from "../utils";
 
 import styles from "@styles/navbar.module.scss";

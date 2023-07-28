@@ -10,6 +10,12 @@ export interface Button {
   destination: string;
 }
 
+export enum ButtonType {
+  PRIMARY = "primary",
+  PRIMARY_SMALL = "primary-small",
+  OUTLINE = "outline",
+}
+
 export interface NavbarLink {
   label: string;
   destination: string;

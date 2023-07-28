@@ -1,15 +1,12 @@
+"use client";
+
 import Link from "next/link";
 
 import Icon, { IconType } from "@components/icon";
+import { ButtonType } from "@types";
 import { Breakpoint, useWindowSize } from "../utils";
 
 import styles from "@styles/button.module.scss";
-
-export enum ButtonType {
-  PRIMARY = "primary",
-  PRIMARY_SMALL = "primary-small",
-  OUTLINE = "outline",
-}
 
 const buttonTypeToStyleMap = {
   [ButtonType.PRIMARY]: styles.primary,

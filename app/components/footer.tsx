@@ -1,7 +1,6 @@
-"use client";
-
 import Link from "next/link";
 
+import Icon from "@components/icon";
 import SectionContainer from "@components/section-container";
 import content from "@content";
 
@@ -52,7 +51,7 @@ export default () => {
                   key={index}
                   target="_blank"
                 >
-                  {icon}
+                  <Icon size={20} type={icon} />
                 </a>
               ))}
             </div>

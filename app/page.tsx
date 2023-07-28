@@ -1,5 +1,3 @@
-"use client";
-
 import CtaBanner from "@components/home/cta-banner";
 import Jumbotron from "@components/home/jumbotron";
 import MeetTheTeam from "@components/home/meet-the-team";
