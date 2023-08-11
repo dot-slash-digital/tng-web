@@ -4,7 +4,9 @@
 
 .component {
   padding: 180px 0;
-  background-color: gray;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   @include breakpoint(tablet) {
     padding: 120px 0;

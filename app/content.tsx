@@ -12,6 +12,8 @@ import {
 import { IconType } from "@components/icon";
 
 // images
+const ContactUsJumbotron = "/images/contact-us-jumbotron.jpg";
+const GalleryJumbotron = "/images/gallery-jumbotron.jpg";
 const Gallery1 = "/images/gallery/1.jpg";
 const Gallery2 = "/images/gallery/2.jpg";
 const Gallery3 = "/images/gallery/3.jpg";
@@ -22,10 +24,20 @@ const Gallery7 = "/images/gallery/7.jpg";
 const HomeCtaBanner = "/images/home-cta-banner.jpg";
 const HomeJumbotron = "/images/home-jumbotron.jpg";
 const HomeRemodeling = "/images/home-remodeling.jpg";
+const HomeWhyUs = "/images/home-why-us.jpg";
 const Logo = "/images/logo.jpg";
 const NewHomeConstruction = "/images/new-home-construction.jpg";
 const SampleBlueprint1 = "/images/sample-blueprint-1.jpg";
 const SampleBlueprint2 = "/images/sample-blueprint-2.jpg";
+const TeamGeorge = "/images/team-george.jpg";
+const TeamIzamar = "/images/team-izamar.jpg";
+const WorkingWithUsJumbotron = "/images/working-with-us-jumbotron.jpg";
+const WorkingWithUsCuratingAnEstimate =
+  "/images/working-with-us-curating-an-estimate.jpg";
+const WorkingWithUsInitialConsultation =
+  "/images/working-with-us-initial-consultation.jpg";
+const WorkingWithUsProjectKickoff =
+  "/images/working-with-us-project-kickoff.jpg";
 
 const navbarLinks: NavbarLink[] = [
   {
@@ -109,13 +121,13 @@ const processItems: ProcessItem[] = [
 ];
 const teamMembers: TeamMember[] = [
   {
-    image: "",
+    image: TeamGeorge,
     title: "George, Owner",
     description:
       "With over 15 years of experience in mortgage banking, construction, and real estate, George brings a wealth of knowledge and experience to his role as a home builder.",
   },
   {
-    image: "",
+    image: TeamIzamar,
     title: "Izamar, Head Designer",
     description:
       "Specializing in modern and contemporary design, Izamar has a keen eye for color and detail. She is passionate about creating spaces that are both stylish and functional.",
@@ -123,7 +135,7 @@ const teamMembers: TeamMember[] = [
 ];
 const workingWithUsContent: WorkingWithUsSection[] = [
   {
-    image: "",
+    image: WorkingWithUsInitialConsultation,
     title: "Initial Consultation",
     description: [
       "Our expert team can also provide assistance with designing custom blueprints to visualize your dream home. We’ll walk through each step of the home building or renovation process and note potential roadblocks along the way. This is your opportunity to ask any questions you may have, so that you feel confident every step of the way.",
@@ -135,7 +147,7 @@ const workingWithUsContent: WorkingWithUsSection[] = [
     },
   },
   {
-    image: "",
+    image: WorkingWithUsCuratingAnEstimate,
     title: "Curating an Estimate",
     description: [
       "For home remodels, we’ll then need to assess the existing condition of the home and develop a plan for the remodel. This includes determining the scope of work, the materials and finishes that will be used, and the timeline for the project. Once the plan is in place, we can begin to estimate the costs. Many factors are considered, including cost of materials, labor, and any permits or fees that may be required. An important consideration is current market conditions, as the cost of materials and labor can fluctuate.",
@@ -143,7 +155,7 @@ const workingWithUsContent: WorkingWithUsSection[] = [
     ],
   },
   {
-    image: "",
+    image: WorkingWithUsProjectKickoff,
     title: "Project Kickoff",
     description: [
       "During the project kickoff, we will review the contract with you and answer any questions you have. We will also discuss the timeline for your project and make sure that you are comfortable with it. We will introduce you to the team members who will be working on your project, and we will discuss the payment schedule for your project. Once we have a signed contract, the project officially starts. This is the time when we will begin working on the design and construction of your home.",
@@ -253,7 +265,7 @@ export default {
       list: processItems,
     },
     whyUs: {
-      image: "",
+      image: HomeWhyUs,
       title: "Why Us",
       description: [
         "At Texas Handyman, we believe that honesty and trustworthiness are essential qualities for any home builder. We are committed to transparency with our clients about the entire home building process, from the initial consultation to the final inspection. We will never make any promises that we cannot keep and are always be upfront about the costs of our services. We know that building a home is a major investment, and we want to make sure that our clients get the best value for their money.",
@@ -272,14 +284,14 @@ export default {
   workingWithUs: {
     jumbotron: {
       title: "Working with Us",
-      backgroundImage: "",
+      backgroundImage: WorkingWithUsJumbotron,
     },
     alternatingContent: workingWithUsContent,
   },
   gallery: {
     jumbotron: {
       title: "Gallery",
-      backgroundImage: "",
+      backgroundImage: GalleryJumbotron,
     },
     previousClients: {
       title: "Previous Clients",
@@ -293,7 +305,7 @@ export default {
   contact: {
     jumbotron: {
       title: "Contact Us",
-      backgroundImage: "",
+      backgroundImage: ContactUsJumbotron,
     },
     contactForm: {
       description: (

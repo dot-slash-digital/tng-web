@@ -24,7 +24,7 @@ export default () => {
     <div className={styles.component}>
       <div
         className={styles.image}
-        style={{ backgroundColor: `url(${image})` }}
+        style={{ backgroundImage: `url(${image})` }}
       />
       <ContentContainer>
         <div className={styles.content}>

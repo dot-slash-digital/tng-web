@@ -30,9 +30,11 @@
 }
 
 .image {
-  background-color: gray;
   width: 550px;
   flex-shrink: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   @include breakpoint(small-desktop) {
     width: 400px;

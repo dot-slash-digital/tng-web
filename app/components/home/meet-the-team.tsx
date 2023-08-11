@@ -16,7 +16,7 @@ export default () => {
               <div className={styles.item} key={index}>
                 <div
                   className={styles["item-image"]}
-                  style={{ backgroundColor: `url(${image})` }}
+                  style={{ backgroundImage: `url(${image})` }}
                 />
                 <div className={styles["item-text"]}>
                   <div className={styles["item-title"]}>{title}</div>
