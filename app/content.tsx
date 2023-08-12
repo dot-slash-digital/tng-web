@@ -190,7 +190,7 @@ const blueprints: Blueprint[] = [
   },
 ];
 
-export const companyName = "TNG Home Builders";
+export const companyName = "Texas Handyman";
 
 export const metadataContent = {
   home: {
@@ -318,7 +318,7 @@ export default {
           and we’ll get back to you promptly.
         </span>
       ),
-      calendlyId: "",
+      calendlyUrl: "https://calendly.com/texas-handyman/initial-consultation",
     },
   },
 };
