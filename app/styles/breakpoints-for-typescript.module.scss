@@ -1,7 +1,0 @@
-@import "./breakpoints.scss";
-
-:export {
-  mobile: map-get($breakpoints, mobile);
-  tablet: map-get($breakpoints, tablet);
-  smallDesktop: map-get($breakpoints, small-desktop);
-}
