@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
-import { companyName } from "@content";
+import { companyName, websiteUrl } from "@content";
 
 import "./styles/global.scss";
 
@@ -16,6 +16,7 @@ const mulish = Mulish({ subsets: ["latin"] });
 export const metadata = {
   icons: { apple: "/apple-touch-icon.png" },
   manifest: "/manifest.json",
+  metadataBase: new URL(`https://${websiteUrl}`),
   themeColor: "",
   title: {
     template: `%s | ${companyName}`,

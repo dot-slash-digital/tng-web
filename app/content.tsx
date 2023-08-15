@@ -180,6 +180,7 @@ const blueprints: Blueprint[] = [
 ];
 
 export const companyName = "Texas Handyman";
+export const websiteUrl = "texashandymanhomes.com";
 
 export const metadataContent = {
   home: {
@@ -216,7 +217,7 @@ export default {
     },
     footer: {
       copyright: "© Texas Handyman, 2023",
-      email: "george@texashandymanhomes.com",
+      email: `george@${websiteUrl}`,
       phone: "(214) 638-5948",
       socialMediaLinks,
       ctaLink: {
@@ -301,10 +302,8 @@ export default {
         <span>
           Please fill out the form below to schedule a consultation with us. For
           questions or concerns, you can email us at{" "}
-          <a href="mailto:george@texashandymanhomes.com">
-            george@texashandymanhomes.com
-          </a>{" "}
-          and we’ll get back to you promptly.
+          <a href={`mailto:george@${websiteUrl}`}>george@{websiteUrl}</a> and
+          we’ll get back to you promptly.
         </span>
       ),
       calendlyUrl: "https://calendly.com/texas-handyman/initial-consultation",
