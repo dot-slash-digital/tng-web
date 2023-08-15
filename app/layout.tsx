@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 import Footer from "@components/footer";
 import Navbar from "@components/navbar";
-import { companyName } from "@content";
+import { companyName, HomeJumbotron } from "@content";
 
 import "./styles/global.scss";
 
@@ -16,6 +16,8 @@ const mulish = Mulish({ subsets: ["latin"] });
 export const metadata = {
   icons: { apple: "/apple-touch-icon.png" },
   manifest: "/manifest.json",
+  "opengraph-image": HomeJumbotron,
+  "twitter-image": HomeJumbotron,
   themeColor: "",
   title: {
     template: `%s | ${companyName}`,
