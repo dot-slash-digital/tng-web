@@ -12,15 +12,9 @@ import {
 import { IconType } from "@components/icon";
 
 // images
+const GALLERY_IMAGE_COUNT = 32;
 const ContactUsJumbotron = "/images/contact-us-jumbotron.jpg";
 const GalleryJumbotron = "/images/gallery-jumbotron.jpg";
-const Gallery1 = "/images/gallery/1.jpg";
-const Gallery2 = "/images/gallery/2.jpg";
-const Gallery3 = "/images/gallery/3.jpg";
-const Gallery4 = "/images/gallery/4.jpg";
-const Gallery5 = "/images/gallery/5.jpg";
-const Gallery6 = "/images/gallery/6.jpg";
-const Gallery7 = "/images/gallery/7.jpg";
 const HomeCtaBanner = "/images/home-cta-banner.jpg";
 const HomeJumbotron = "/images/home-jumbotron.jpg";
 const HomeRemodeling = "/images/home-remodeling.jpg";
@@ -164,15 +158,10 @@ const workingWithUsContent: WorkingWithUsSection[] = [
     ],
   },
 ];
-const previousClients: string[] = [
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery4,
-  Gallery5,
-  Gallery6,
-  Gallery7,
-];
+const previousClients: string[] = Array.apply(
+  null,
+  Array(GALLERY_IMAGE_COUNT)
+).map((_, galleryIndex) => `/images/gallery/${galleryIndex + 1}.jpg`);
 const blueprints: Blueprint[] = [
   {
     image: SampleBlueprint1,
