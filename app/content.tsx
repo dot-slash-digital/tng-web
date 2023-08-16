@@ -12,7 +12,7 @@ import {
 import { IconType } from "@components/icon";
 
 // images
-const GALLERY_IMAGE_COUNT = 32;
+const GALLERY_IMAGE_COUNT = 27;
 const ContactUsJumbotron = "/images/contact-us-jumbotron.jpg";
 const GalleryJumbotron = "/images/gallery-jumbotron.jpg";
 const HomeCtaBanner = "/images/home-cta-banner.jpg";
